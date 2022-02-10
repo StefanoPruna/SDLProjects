@@ -27,6 +27,12 @@ Game::Game()
 
 }
 
+//Destructor
+Game::~Game()
+{
+
+}
+
 bool Game::Start()
 {
 	sdlRenderer = SDL_CreateRenderer(sdlWindow, 0, -1);
@@ -41,12 +47,12 @@ bool Game::Start()
 
 void Game::Draw()
 {
-	SDL_SetRenderDrawColor(sdlRenderer, 0, 0, 0, 255);
+	SDL_SetRenderDrawColor(sdlRenderer, 200, 0, 0, 255);
 	SDL_RenderClear(sdlRenderer);
 	SDL_RenderPresent(sdlRenderer);
 }
 
-void Game::Run(char* title, int width, int height, bool fullscreen)
+void Game::Run(const char* title, int width, int height, bool fullscreen)
 {
 	int creationFlag = 0;
 
@@ -82,8 +88,17 @@ void Game::Destroy()
 	SDL_Quit();
 }
 
-//Destructor
-Game::~Game()
+void Game::ProcessInput()
+{
+
+}
+
+void Game::Update()
+{
+
+}
+
+void Game::ShutDown()
 {
 
 }

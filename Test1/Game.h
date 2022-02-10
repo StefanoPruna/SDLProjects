@@ -40,7 +40,7 @@ public:
 
 	void ShutDown();
 
-	void Run(char* title, int width, int height, bool fullscreen);
+	void Run(const char* title, int width, int height, bool fullscreen);
 
 	/*void Game::Run(char* title, int width, int height, bool fullscreen)
 	{

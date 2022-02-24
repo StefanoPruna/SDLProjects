@@ -7,7 +7,7 @@ SDL_Renderer* GameLoad::m_Renderer = nullptr;
 
 GameLoad::GameLoad()
 {
-
+	isRunning = false;
 }
 
 GameLoad::~GameLoad()
@@ -27,6 +27,7 @@ void GameLoad::load()
 		m_Renderer = SDL_CreateRenderer(sdlWindow, 0, -1);
 		if (m_Renderer != nullptr)
 			cout << "Create Renderer - success \n";
+		isRunning = true;
 	}
 }
 
@@ -35,4 +36,9 @@ void GameLoad::clean()
 	SDL_DestroyWindow(sdlWindow);
 	SDL_DestroyRenderer(m_Renderer);
 	SDL_Quit();
+}
+
+bool GameLoad::running()
+{
+	return isRunning;
 }

@@ -1,8 +1,8 @@
 #include <SDL.h>
 
 //A1 - Practical 1: Sprite Animation
-//Version 01
-//17/02/22
+//Version 02
+//24/02/22
 //Author: Stefano 
 //Basic Game Engine Programming
 
@@ -16,15 +16,29 @@ int main(int argc, char** argv)
 	GameObject* player1 = new GameObject();
 	GameObject* player2 = new GameObject();
 	GameObject* player3 = new GameObject();
+	GameObject* player4 = new GameObject();
+	GameObject* player5 = new GameObject();
 
 	gameLoad->load();
-	player2->draw("assets/TheEvilDog.bmp", 0, 0);
-	player1->draw("assets/TheEvilDog.bmp", 500, 800);
-	player3->draw("assets/TheEvilDog.bmp", 80, 40);
-	player2->render();
-	player1->render();
-	player3->render();
-
+	player1->draw(8, "assets/SwordCatJumping.bmp", 0,  10, 0, 'N', 1.0f, 1);
+	player2->draw(8, "assets/SwordCatJumping.bmp", 0, 650, 0, 'N', 1.0f, 1);
+	player3->draw(8, "assets/SwordCatJumping.bmp", 450, 300, 0, 'N', 1.5f, 1);
+	player4->draw(8, "assets/SwordCatJumping.bmp", 1000, 10, 90, 'H', 1.0f, 1);
+	player5->draw(8, "assets/SwordCatJumping.bmp", 1000, 650, 90, 'H', 1.0f, 1);
+	while (gameLoad->running())
+	{
+		player1->update();
+		player1->render();
+		player2->update();
+		player2->render();
+		player3->update();
+		player3->render();
+		player4->update();
+		player4->render();
+		player5->update();
+		player5->render();
+	}
+	
 	//3 seconds of delay
 	SDL_Delay(3000);
 

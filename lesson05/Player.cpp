@@ -65,7 +65,8 @@ void Player::handleEvents()
 				update();
 				break;
 			case SDLK_UP:
-				playerMove(m_vector_up);
+				//playerMove(m_vector_up);
+				m_vector_init->setY(-20);
 				m_Flip = 'N';
 				m_angle = 90;
 				cout << "UP\n";
@@ -119,8 +120,7 @@ void Player::handleEvents()
 		m_angle = 0;
 	}
 	else
-	{
-		
+	{		
 		//m_Flip = 'N';
 		m_Flip = 'H';
 		m_angle = 0;

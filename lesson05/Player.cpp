@@ -66,7 +66,7 @@ void Player::handleEvents()
 				break;
 			case SDLK_UP:
 				//playerMove(m_vector_up);
-				m_vector_init->setY(-20);
+				m_vector_init->setY(-20);//to make it jump
 				m_Flip = 'N';
 				m_angle = 90;
 				cout << "UP\n";

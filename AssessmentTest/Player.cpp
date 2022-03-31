@@ -100,12 +100,11 @@ void Player::handleEvents()
 	/*if (m_destinationRectangle.x == 170 && m_destinationRectangle.y == 30)
 		cout << "You have reached your destination!\n";*/
 
-	if (m_destinationRectangle.x == enemyDestinationRectangle.x)
+	if (m_destinationRectangle.x == enemyDestinationRectangle.x && m_destinationRectangle.y == enemyDestinationRectangle.y)
 	{
-		cout << "Your score is: " + score;
+		cout << "You got damaged: " + score;
 		score -= 100;
 	}
-		
 
 	playerMove(m_vector_init);
 	if (m_destinationRectangle.x < 0 + 80 && (m_vector_init->getX() < 0))//width for the left wall

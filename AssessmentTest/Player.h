@@ -15,6 +15,7 @@ public:
 	bool alarm();
 	SDL_Rect getPosPlayer();
 	int score = 1000;
+	
 
 private:
 	int m_frames;

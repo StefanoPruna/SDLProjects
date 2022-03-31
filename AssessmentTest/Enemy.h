@@ -3,7 +3,6 @@
 #include "GameObject.h"
 #include "Vector2D.h"
 
-
 class Enemy : GameObject
 {
 public:

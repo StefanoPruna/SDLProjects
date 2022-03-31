@@ -51,9 +51,8 @@ void Enemy::enemyEvents()
 void Enemy::enemyMove(Vector2D* m_EnemyVector)
 {
 	m_destinationRectangle.x += m_EnemyVector->getX();
-	//cout << m_destinationRectangle.x;
-
-	//enemyDestinationRectangle.x += m_EnemyVector->getX();
+	enemyDestinationRectangle.y += m_EnemyVector->getY();
+	enemyDestinationRectangle.x += m_EnemyVector->getX();
 }
 
 SDL_Rect Enemy::getPosEnemy()

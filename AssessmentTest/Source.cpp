@@ -1,6 +1,6 @@
-//A1 - Practical 4: Text and Sounds
-//Version 07
-//24/03/22
+//A1 - Assessment
+//Version 08
+//29/03/22
 //Author: Stefano 
 //Basic Game Engine Programming
 
@@ -33,8 +33,7 @@ int main(int argc, char** argv)
 	//Rectangle* rect1 = new Rectangle(25, 255, 25);
 	Rectangle* rectPlayer = new Rectangle(255, 255, 255);//white rectangle behind the player
 	Rectangle* RectText = new Rectangle(200, 200, 255);
-	Enemy* enemy1 = new Enemy(4, "assets/evilMouse.bmp", 900, 650);
-
+	Enemy* enemy1 = new Enemy(4, "assets/Enemies/evilmouse.bmp", 900, 650);
 
 	//if it's -1) = infinity, if it's 0) == play once, if it's 1) = play twice, if it's 2) = play three times
 	//In this case, it'll play once
